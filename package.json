@@ -1,0 +1,16 @@
+{
+  "name": "advent-of-code-2019",
+  "version": "1.0.0",
+  "description": "Advent Calendar of coding challenges",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha */*.spec.js"
+  },
+  "type": "commonjs",
+  "author": "Sami Gildart",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "4.2.0",
+    "mocha": "6.2.2"
+  }
+}
