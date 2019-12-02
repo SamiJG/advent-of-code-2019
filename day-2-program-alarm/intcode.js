@@ -24,6 +24,22 @@ const intcode = inputArray => {
   return inputArray;
 };
 
-module.exports = { intcode };
+const calculateNounAndVerb = (inputArray, expectedOutput) => {
+  const newInputArray = [...inputArray];
+  newInputArray[1] = 1;
+  const outputBaseCase = intcode(inputArray)[0];
+  const outputPlusOneNoun = intcode(newInputArray)[0];
 
-// console.log(intcode(inputArray));
+  const nounMultiplier = outputPlusOneNoun - outputBaseCase;
+
+  const noun = Math.floor((expectedOutput - outputBaseCase) / nounMultiplier);
+
+  const verb = expectedOutput - outputBaseCase - noun * nounMultiplier;
+
+  return `${noun}${verb}`;
+};
+
+module.exports = { intcode, calculateNounAndVerb };
+
+// console.log(intcode(inputArray)[0]);
+// console.log(calculateNounAndVerb(inputArray, 19690720))
