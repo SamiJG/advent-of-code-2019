@@ -29,7 +29,7 @@ describe("fuelOffsetCalculator", () => {
 });
 
 describe("totalFuelCalculator", () => {
-  it.only("for mass of 10, returns 1", () => {
+  it("for mass of 10, returns 1", () => {
     expect(totalFuelCalculator([10])).to.equal(1);
   });
   it("for masses of 12 and 14, returns 4", () => {

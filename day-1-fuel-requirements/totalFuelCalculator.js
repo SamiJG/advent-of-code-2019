@@ -25,4 +25,4 @@ const totalFuelCalculator = inputArray =>
 module.exports = { fuelCalculator, totalFuelCalculator, fuelOffsetCalculator };
 
 
-console.log(totalFuelCalculator(inputArray));
+// console.log(totalFuelCalculator(inputArray));
